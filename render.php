@@ -13,7 +13,7 @@ $cor = imagecolorallocate($rImg, 0, 0, 0);
 //imagettftext($im, 20, 0, 11, 21, $grey, $font, $text);
 
 //Escrever nome
-imagestring($rImg, 5, 126, 22, $fullname, $cor);
+imagestring($rImg, 5, 260, 390, $fullname, $cor);
  
 //Header e output
 header('Content-type: image/jpeg');
