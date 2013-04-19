@@ -13,8 +13,6 @@
                 <a class="brand" href="#">Belize para Todos!</a>
                 <ul class="nav">
                     <li class="active"><a href="#">Crear certificado</a></li>
-                    <!--li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li-->
                 </ul>
             </div>
         </div>
@@ -24,13 +22,12 @@
         <form action="" method="post" id="form1">
             <p>Hacete uno y compartilo en Facebook!</p>
             <div class="input-append">
-                <input type="text" name="fullname" value="" placeholder="Juan Perez">
+                <input type="text" name="fullname" value="" maxlength="17" placeholder="Juan Perez">
                 <input class="btn btn-primary" name="render" type="submit" value="Generar!" />
             </div>
         </form>
         <p>
             <img id="img-result" src="render.php?fullname=Juan%20Perez" />
-            <!-- tst -->
         </p>
     </div>
     <script>
