@@ -7,13 +7,14 @@ $fullname = urldecode($_GET['fullname']);
 $rImg = imagecreatefromjpeg("artwork/v1.jpg");
  
 //Definir cor
-$cor = imagecolorallocate($rImg, 0, 0, 0);
+$color = imagecolorallocate($rImg, 0, 0, 0);
 
-//$font = 'arial.ttf';
-//imagettftext($im, 20, 0, 11, 21, $grey, $font, $text);
+$font = 'artwork/fonts/badhand.ttf';
+$font = 'artwork/fonts/sign.ttf';
+imagettftext($rImg, 20, 0, 260, 405, $color, $font, $fullname);
 
 //Escrever nome
-imagestring($rImg, 5, 260, 390, $fullname, $cor);
+//imagestring($rImg, 5, 260, 390, $fullname, $color);
  
 //Header e output
 header('Content-type: image/jpeg');
