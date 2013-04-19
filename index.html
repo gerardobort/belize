@@ -3,13 +3,16 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Belize para Todos!</title>
+    <meta property="og:title" content="Belize Para Todos"/>
+    <meta property="og:url" content="http://belize.gosocial.com.ar"/>
+    <meta property="og:image" content="http://belize.gosocial.com.ar/artwork/jorgito.jpg"/>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css" type="text/css" />
 </head>
 <body>
-
+    <div id="fb-root"></div>
     <div class="navbar navbar-fixed-top" style="position: absolute;">
         <div class="navbar-inner">
             <div class="container" style="width: auto; padding: 0 20px;">
@@ -35,6 +38,7 @@
                             <input class="btn btn-primary" name="render" type="submit" value="Generar!" />
                         </div>
                     </form>
+                    <div class="fb-like" data-href="http://belize.gosocial.com.ar" data-send="true" data-width="450" data-show-faces="true"></div>
                 </div>
             </div>
 
@@ -124,6 +128,12 @@
       ga('send', 'pageview');
 
     </script>
-
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=368564319929971";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
