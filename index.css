@@ -40,12 +40,16 @@
     width: 200px;
 }
 
-#result-container {
+.result-container {
     position: relative;
 }
 
 #img-art {
     position: relative;
+}
+
+#img-art img {
+    width: 100%;
 }
 
 #img-art.default:after,
@@ -68,12 +72,26 @@
     padding-left: 28px;
     height: 22px;
     display: block;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
 }
+
 #share-tw {
     background: url(artwork/twitter.png) no-repeat;
     padding-left: 28px;
     height: 22px;
     display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+#img-art.custom ~ #share-fb,
+#img-art.custom ~ #share-tw {
+    background-color: #0e0;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 480px) {
