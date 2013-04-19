@@ -39,6 +39,28 @@
     width: 200px;
 }
 
+#result-container {
+    position: relative;
+}
+
+#img-art {
+    position: relative;
+}
+
+#img-art.default:after,
+#img-art.loading:after {
+    position: absolute;    
+    background-color: rgba(0,0,0,0.8);
+    content: 'Generá tu propio certificado escribiendo tu nombre en el formulario que aparece arriba!';
+    top: 30px;
+    left: 20px;
+    color: red;
+    padding: 30px;
+}
+
+#img-art.loading:after {
+    content: 'Procesando...';
+}
 
 @media screen and (max-width: 480px) {
     .hero-unit {

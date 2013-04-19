@@ -34,7 +34,7 @@
                     <form action="" method="post" id="form1">
                         <p>Hacete uno y compartilo en Facebook!</p>
                         <div class="input-append">
-                            <input type="text" name="fullname" value="" maxlength="25" placeholder="Juan Perez">
+                            <input type="text" name="fullname" value="" maxlength="25" placeholder="Jorge Inc.">
                             <input class="btn btn-primary" name="render" type="submit" value="Generar!" />
                         </div>
                     </form>
@@ -81,7 +81,9 @@
 
         <div class="row-fluid">
             <div class="hero-unit result-container">
-                <img id="img-result" src="render.php?fullname=Juan%20Perez" />
+                <div id="img-art" class="default">
+                    <img id="img-result" src="artwork/v1.jpg" />
+                </div>
             </div>
         </div>
 
@@ -96,10 +98,16 @@
     <script>
         // yes, old school man... jquery is for gorillas
         var form = document.getElementById('form1'),
-            img = document.getElementById('img-result');
+            img = document.getElementById('img-result'),
+            art = document.getElementById('img-art');
 
         form.render.onclick = function () {
             img.src = 'render.php?fullname=' + escape(form.fullname.value);
+            art.className = 'loading';
+            img.onload = function () {
+                art.className = 'custom';
+            };
+            document.location.href = '#img-art';
             return false;
         };
 
