@@ -1,9 +1,10 @@
 <?php
+//phpinfo();die;
  
 $fullname = urldecode($_GET['fullname']);
 
 //Carregar imagem
-$rImg = ImageCreateFromJPEG("artwork/v1.jpg");
+$rImg = imagecreatefromjpeg("artwork/v1.jpg");
  
 //Definir cor
 $cor = imagecolorallocate($rImg, 0, 0, 0);
@@ -18,4 +19,3 @@ imagestring($rImg, 5, 126, 22, $fullname, $cor);
 header('Content-type: image/jpeg');
 imagejpeg($rImg, NULL, 100);
  
-?
