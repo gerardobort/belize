@@ -25,7 +25,7 @@
             <p>Hacete uno y compartilo en Facebook!</p>
             <div class="input-append">
                 <input type="text" name="fullname" value="" placeholder="Juan Perez">
-                <input class="btn btn-primary" type="submit" value="Generar!" />
+                <input class="btn btn-primary" name="render" type="submit" value="Generar!" />
             </div>
         </form>
         <p>
@@ -35,9 +35,8 @@
     <script>
         var form = document.getElementById('form1'),
             img = document.getElementById('img-result');
-        form.beforesubmit = function () {
-            alert('processing');
-            img.src = 'renderp.php?fullname=' + escape(form.fullname);
+        form.render.onclick = function () {
+            img.src = 'render.php?fullname=' + escape(form.fullname.value);
             return false;
         };
     </script>
