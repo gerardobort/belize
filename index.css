@@ -13,3 +13,22 @@
     top: 0px;
     opacity: 0.2;
 }
+
+.jorgito-te-mira-serio {
+    background: url(artwork/jorgito.jpg);
+    width: 456px;
+    height: 280px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+.jorgito-te-mira-serio:after {
+    content: '"Belize para Todos me cambió la vida"';
+    display: block;
+    float: right;
+    text-align: right;
+    font-size: 36px;
+    line-height: 30px;
+    color: #999;
+    width: 200px;
+}
