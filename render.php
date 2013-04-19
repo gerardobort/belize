@@ -9,7 +9,7 @@ $font1 = 'artwork/fonts/badhand.ttf';
 $font2 = 'artwork/fonts/celine.ttf';
 
 imagettftext($rImg, 24, 0, 260, 405, $color, $font2, $fullname);
-imagettftext($rImg, 22, 0, 320, 458, $color, $font2, date('d', time()));
+imagettftext($rImg, 22, 0, 320, 458, $color, $font2, date('dS', time()));
 imagettftext($rImg, 22, 0, 480, 458, $color, $font2, date('F', time()));
 imagettftext($rImg, 22, 0, 700, 458, $color, $font2, date('y', time()));
 
