@@ -1,6 +1,6 @@
 <?php
  
-$fullname = substr(urldecode($_GET['fullname']), 0, 17);
+$fullname = substr(urldecode($_GET['fullname']), 0, 25);
 $rImg = imagecreatefromjpeg("artwork/v1.jpg");
 $color = imagecolorallocate($rImg, 63, 71, 73);
 

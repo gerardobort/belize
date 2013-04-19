@@ -25,7 +25,9 @@
     display: block;
     position: relative;
     margin: 0 auto;
+    max-width: 100%;
 }
+
 .jorgito-te-mira-serio:after {
     content: '"Belize para Todos me cambió la vida"';
     display: block;
@@ -35,4 +37,14 @@
     line-height: 30px;
     color: #999;
     width: 200px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .hero-unit {
+        padding: 10px;
+    }
+    .hero-unit h1 {
+        font-size: 30px;
+    }
 }
