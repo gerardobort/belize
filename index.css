@@ -62,6 +62,19 @@
     content: 'Procesando...';
 }
 
+#share-fb {
+    background: url(artwork/facebook.png) no-repeat;
+    padding-left: 28px;
+    height: 22px;
+    display: block;
+}
+#share-tw {
+    background: url(artwork/twitter.png) no-repeat;
+    padding-left: 28px;
+    height: 22px;
+    display: block;
+}
+
 @media screen and (max-width: 480px) {
     .hero-unit {
         padding: 10px;
