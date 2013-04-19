@@ -137,6 +137,12 @@
             img = document.getElementById('img-result'),
             art = document.getElementById('img-art');
 
+        // opengraph redirection - facebook
+        if (document.location.href.match(/\?fullname=.+/)) {
+            var fullname = unescape(document.location.href.replace(/^.*\?fullname=(.*)$/, '$1'));
+            document.location.href = 'http://belize.gosocial.com.ar/render.php?fullname=' + escape(fullname);
+        } 
+
         form.render.onclick = function () {
             img.src = 'render.php?fullname=' + escape(form.fullname.value);
             art.className = 'loading';
@@ -155,7 +161,7 @@
         var tws = document.getElementById("share-tw");
         fbshare.onclick = function() {
             fbShare(
-                "http://belize.gosocial.com.ar", 
+                "http://belize.gosocial.com.ar/?fullname=" + escape(form.fullname.value), 
                 'Belize para ' + escape(form.fullname.value) + ', Belize para TODOS', '', 
                 'http://belize.gosocial.com.ar/render.php?fullname=' + escape(form.fullname.value),
                 600,
